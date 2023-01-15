@@ -187,7 +187,7 @@ MonoBehaviour:
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.41960788, g: 0.39607847, b: 0.38823533, a: 1}
-    m_PressedColor: {r: 0.30980393, g: 0.29803923, b: 0, a: 1}
+    m_PressedColor: {r: 0.21960786, g: 0.21960786, b: 0.21960786, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.5764706, g: 0.6117647, b: 0.6117647, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -969,6 +969,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f77d79c9f538e549be94a329311ab30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  textComponent: {fileID: 1838891021}
+  lines:
+  - Sad
+  textSpeed: 0.05
+  Canvas: {fileID: 361337638}
 --- !u!1 &1391216168
 GameObject:
   m_ObjectHideFlags: 0
@@ -1239,7 +1244,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
+    rgba: 4294967295
   m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -1454,6 +1459,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06d2d19337964364ba4ef29c67a9f061, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  textComponent: {fileID: 1838891021}
+  lines:
+  - Then what are you doing here?
+  textSpeed: 0.01
+  Canvas: {fileID: 361337638}
 --- !u!1 &2089563315
 GameObject:
   m_ObjectHideFlags: 0
@@ -1549,8 +1559,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textComponent: {fileID: 1838891021}
   lines:
+  - TTechnology and Psychology?
   - Technology and Psychology?
   textSpeed: 0.05
+  index: 0
 --- !u!1 &2117614236
 GameObject:
   m_ObjectHideFlags: 0
@@ -1698,6 +1710,7 @@ GameObject:
   - component: {fileID: 2138019033}
   - component: {fileID: 2138019032}
   - component: {fileID: 2138019031}
+  - component: {fileID: 2138019034}
   m_Layer: 5
   m_Name: Not sure
   m_TagString: Untagged
@@ -1808,3 +1821,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2138019029}
   m_CullTransparentMesh: 1
+--- !u!114 &2138019034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2138019029}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f3fa16853bd0304e9e8988efb0cea69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textComponent: {fileID: 1838891021}
+  lines:
+  - Enjoy the game!
+  textSpeed: 0
+  Canvas: {fileID: 361337638}
