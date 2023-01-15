@@ -5,9 +5,8 @@ using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using TMPro;
 
-public class minButton : MonoBehaviour
+public class middlebutton : MonoBehaviour
 {
-    public static int Morality;
     public static int ansindex;
     public TextMeshProUGUI textComponent;
     public string[] lines;
@@ -28,12 +27,9 @@ public class minButton : MonoBehaviour
     }
     public void IWasClicked()
     {
-        Debug.Log("-1");
-        DialogueSystem.Morality -= 1;
-        Debug.Log(DialogueSystem.Morality);
         textComponent.text = string.Empty;
         StartCoroutine(TypeLine());
-        ansindex++; 
+        ansindex++;
     }
     void StartDialogue()
     {
