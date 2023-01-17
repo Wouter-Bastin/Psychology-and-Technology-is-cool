@@ -6,14 +6,21 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour {
     public void PlayGame () {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1); //Office building heeft index 1, start bij menu (index 0)
-
-   }
+     SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1); //starts videoclip
+     
+    }
 
    public void QuitGame() {
 
-        Debug.Log("QUIT!");
-        Application.Quit();
+     Debug.Log("QUIT!");
+     Application.Quit();
    }
 
+    
+
 }
+
+
+
+
+    
