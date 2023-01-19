@@ -10,7 +10,10 @@ public class DialogueSystem : MonoBehaviour
     public float textSpeed;
     public static int Morality;
     public int index;
-
+    public GameObject Dialogue_1;
+    public GameObject Dialogue_1Camera;
+    public GameObject player;
+    public GameObject trigger1;
 
     // Start is called before the first frame update
     void Start()
@@ -19,23 +22,22 @@ public class DialogueSystem : MonoBehaviour
         StartDialogue();
         
     }
-
     // Update is called once per frame
-    //void Update()
-    //{
-    //    if (Input.GetMouseButtonDown(0))
-    //    {
-    //      if (textComponent.text == lines[index])
-    //      {
-    //         NextLine();
-    //     }
-    //      else
-    //      {
-    //         StopAllCoroutines();
-    //         textComponent.text = lines[index];
-    //      }
-    //    }
-    //}
+    void Update()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            if (textComponent.text == lines[index])
+            {
+                NextLine();
+            }
+            else
+            {
+                StopAllCoroutines();
+                textComponent.text = lines[index];
+            }
+        }
+    }
     void StartDialogue()
     {
         index = 0;
@@ -49,7 +51,7 @@ public class DialogueSystem : MonoBehaviour
             yield return new WaitForSeconds(textSpeed);
         }
     }
-    void NextLine()
+    public void NextLine()
     {
         if(index < lines.Length - 1)
         {
@@ -59,7 +61,11 @@ public class DialogueSystem : MonoBehaviour
         }
         else
         {
-            gameObject.SetActive(false);
+            Dialogue_1.SetActive(false);
+            Debug.Log("End triggered1");
+            trigger1.SetActive(false);
+            player.SetActive(true);
+            Dialogue_1Camera.SetActive(false);
         }
     }
 }
