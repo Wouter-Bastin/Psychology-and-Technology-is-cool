@@ -9,8 +9,7 @@ public class DialogueSystem : MonoBehaviour
     public string[] lines;
     public float textSpeed;
     public static int Morality;
-
-    private int index;
+    public int index;
 
 
     // Start is called before the first frame update
@@ -22,21 +21,21 @@ public class DialogueSystem : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        if (Input.GetMouseButtonDown(0))
-        {
-          if (textComponent.text == lines[index])
-          {
-             NextLine();
-          }
-          else
-          {
-             StopAllCoroutines();
-             textComponent.text = lines[index];
-          }
-        }
-    }
+    //void Update()
+    //{
+    //    if (Input.GetMouseButtonDown(0))
+    //    {
+    //      if (textComponent.text == lines[index])
+    //      {
+    //         NextLine();
+    //     }
+    //      else
+    //      {
+    //         StopAllCoroutines();
+    //         textComponent.text = lines[index];
+    //      }
+    //    }
+    //}
     void StartDialogue()
     {
         index = 0;
