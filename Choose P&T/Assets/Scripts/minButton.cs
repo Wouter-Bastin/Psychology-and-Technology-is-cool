@@ -12,28 +12,55 @@ public class minButton : MonoBehaviour
     public TextMeshProUGUI textComponent;
     public string[] lines;
     public float textSpeed;
-    public GameObject Canvas;
+    public GameObject Dialogue;
+    public GameObject DialogueCamera;
+    public GameObject player;
+    public GameObject trigger;
+    public Button button;
+    public GameObject AddButton;
+    public GameObject varGameObject;
 
     void Start()
     {
         textComponent.text = string.Empty;
         ansindex = 0;
+        button = GetComponent<Button>();
     }
     void Update()
     {
-        if (Input.GetMouseButtonDown(0) && (ansindex > lines.Length - 1))
-        {
-            Canvas.SetActive(false);
-        }
+    //    if (Input.GetMouseButtonDown(0) && (ansindex > lines.Length - 1))
+    //    {
+    //        Dialogue.SetActive(false);
+    //        Debug.Log("End triggered");
+    //        trigger.SetActive(false);
+    //        player.SetActive(true);
+    //        DialogueCamera.SetActive(false);
+    //        Cursor.lockState = CursorLockMode.None;
+    //        Cursor.visible = false;
+    //    }
+          if (Input.GetMouseButtonDown(0))
+         {
+            if (textComponent.text == lines[ansindex])
+            {
+                NextLine();
+            }
+            else
+            {
+                StopAllCoroutines();
+                textComponent.text = lines[ansindex];
+             }
+          }
     }
     public void IWasClicked()
     {
-        Debug.Log("-1");
-        DialogueSystem.Morality -= 1;
-        Debug.Log(DialogueSystem.Morality);
+        Debug.Log("NO");
+        StopAllCoroutines();
         textComponent.text = string.Empty;
         StartCoroutine(TypeLine());
-        ansindex++; 
+        ansindex++;
+        button.enabled = !button.enabled;
+        AddButton.SetActive(false);
+        varGameObject.GetComponent<DiaSystemWithButtons>().enabled = false;
     }
     void StartDialogue()
     {
@@ -45,6 +72,25 @@ public class minButton : MonoBehaviour
         {
             textComponent.text += c;
             yield return new WaitForSeconds(textSpeed);
+        }
+    }
+    public void NextLine()
+    {
+        if (ansindex < lines.Length - 1)
+        {
+            ansindex++;
+            textComponent.text = string.Empty;
+            StartCoroutine(TypeLine());
+        }
+        else
+        {
+            Dialogue.SetActive(false);
+            Debug.Log("End triggered");
+            trigger.SetActive(false);
+            player.SetActive(true);
+            DialogueCamera.SetActive(false);
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = false;
         }
     }
 }

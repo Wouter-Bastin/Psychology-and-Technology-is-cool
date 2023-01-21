@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class DialogueSystem : MonoBehaviour
+public class DiaSystemWithButtons : MonoBehaviour
 {
     public TextMeshProUGUI textComponent;
     public string[] lines;
@@ -20,23 +20,8 @@ public class DialogueSystem : MonoBehaviour
     {
         textComponent.text = string.Empty;
         StartDialogue();
-        
-    }
-    // Update is called once per frame
-    void Update()
-    {
-        if (Input.GetMouseButtonDown(0))
-        {
-            if (textComponent.text == lines[index])
-            {
-                NextLine();
-            }
-            else
-            {
-                StopAllCoroutines();
-                textComponent.text = lines[index];
-            }
-        }
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
     }
     void StartDialogue()
     {
@@ -53,7 +38,7 @@ public class DialogueSystem : MonoBehaviour
     }
     public void NextLine()
     {
-        if(index < lines.Length - 1)
+        if (index < lines.Length - 1)
         {
             index++;
             textComponent.text = string.Empty;
