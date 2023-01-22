@@ -10433,7 +10433,7 @@ MonoBehaviour:
   - And now we need to find the bugs and make sure the robot doesn't do that again.
   - 'Your task is to reprogram the robot, since it''s your first day maybe you could
     ask your collegues for help. '
-  textSpeed: 0.05
+  textSpeed: 0.04
   Dialogue: {fileID: 1193461949}
   DialogueCamera: {fileID: 839167752}
   player: {fileID: 481617728}
@@ -23312,7 +23312,7 @@ MonoBehaviour:
   lines:
   - ' Manager: Good morning, I was expecting you. I assume you know about our robot
     that''s been going over the news?'
-  textSpeed: 0.05
+  textSpeed: 0.02
   index: 0
   Dialogue: {fileID: 1193461949}
   DialogueCamera: {fileID: 839167752}
@@ -23449,7 +23449,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2271036430416539210, guid: d512ebcdf02532446b58dc05fc0f10d2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 86.037
+      value: 93.195
       objectReference: {fileID: 0}
     - target: {fileID: 2271036430416539210, guid: d512ebcdf02532446b58dc05fc0f10d2, type: 3}
       propertyPath: m_LocalPosition.y
@@ -23457,7 +23457,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2271036430416539210, guid: d512ebcdf02532446b58dc05fc0f10d2, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 46.074
+      value: 67.701
       objectReference: {fileID: 0}
     - target: {fileID: 2271036430416539210, guid: d512ebcdf02532446b58dc05fc0f10d2, type: 3}
       propertyPath: m_LocalRotation.w
@@ -29562,11 +29562,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06d2d19337964364ba4ef29c67a9f061, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textComponent: {fileID: 0}
+  textComponent: {fileID: 1052317238}
   lines:
-  - Then what are you doing here?
-  textSpeed: 0.01
-  Canvas: {fileID: 0}
+  - Ah good, then you know about our problem. That will also be the problem you can
+    start to solve on your first day.
+  - Your task is to reprogram the robot, since it's your first day maybe you could
+    ask your collegues for help.
+  textSpeed: 0.04
+  Dialogue: {fileID: 1193461949}
+  DialogueCamera: {fileID: 839167752}
+  player: {fileID: 481617728}
+  trigger: {fileID: 209880869}
+  button: {fileID: 1768233500}
+  MinButton: {fileID: 602383403}
+  varGameObject: {fileID: 1193461949}
 --- !u!114 &1768233500
 MonoBehaviour:
   m_ObjectHideFlags: 0

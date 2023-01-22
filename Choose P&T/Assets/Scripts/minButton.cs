@@ -19,6 +19,7 @@ public class minButton : MonoBehaviour
     public Button button;
     public GameObject AddButton;
     public GameObject varGameObject;
+    private bool active;
 
     void Start()
     {
@@ -28,17 +29,7 @@ public class minButton : MonoBehaviour
     }
     void Update()
     {
-    //    if (Input.GetMouseButtonDown(0) && (ansindex > lines.Length - 1))
-    //    {
-    //        Dialogue.SetActive(false);
-    //        Debug.Log("End triggered");
-    //        trigger.SetActive(false);
-    //        player.SetActive(true);
-    //        DialogueCamera.SetActive(false);
-    //        Cursor.lockState = CursorLockMode.None;
-    //        Cursor.visible = false;
-    //    }
-          if (Input.GetMouseButtonDown(0))
+          if (Input.GetMouseButtonDown(0) && active == true)
          {
             if (textComponent.text == lines[ansindex])
             {
@@ -54,10 +45,10 @@ public class minButton : MonoBehaviour
     public void IWasClicked()
     {
         Debug.Log("NO");
+        active = true;
         StopAllCoroutines();
         textComponent.text = string.Empty;
         StartCoroutine(TypeLine());
-        ansindex++;
         button.enabled = !button.enabled;
         AddButton.SetActive(false);
         varGameObject.GetComponent<DiaSystemWithButtons>().enabled = false;
