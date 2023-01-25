@@ -20,6 +20,7 @@ public class addButton : MonoBehaviour
     public GameObject MinButton;
     public GameObject varGameObject;
     private bool active;
+    public GameObject interact;
 
     void Start()
     {
@@ -82,6 +83,7 @@ public class addButton : MonoBehaviour
             DialogueCamera.SetActive(false);
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = false;
+            interact.SetActive(false);
         }
     }
 }

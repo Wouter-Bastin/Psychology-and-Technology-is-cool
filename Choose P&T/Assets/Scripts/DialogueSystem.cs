@@ -14,6 +14,7 @@ public class DialogueSystem : MonoBehaviour
     public GameObject DialogueCamera;
     public GameObject player;
     public GameObject trigger;
+    public GameObject interact;
 
     // Start is called before the first frame update
     void Start()
@@ -66,6 +67,7 @@ public class DialogueSystem : MonoBehaviour
             trigger.SetActive(false);
             player.SetActive(true);
             DialogueCamera.SetActive(false);
+            interact.SetActive(true);
         }
     }
 }

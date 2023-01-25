@@ -8,7 +8,7 @@ public class Interact : MonoBehaviour
 {
     public TMP_Text InteractText;
     public GameObject otherObject;
-    public float distanceThreshold = 2.0f;
+    public float distanceThreshold = 200f;
     //public InteractText distanceInteractText;
 
     void Update()
@@ -19,13 +19,13 @@ public class Interact : MonoBehaviour
             //distanceInteractText.text = "Distance: " + distance.ToString();
             //distanceInteractText.enabled = true;
 
-            InteractText.text = "Press p to interact";
+            InteractText.text = "Press f to interact";
             InteractText.enabled = true;
         }
         else
         {
             //distanceInteractText.enabled = false;
-            InteractText.enabled = false;
+            InteractText.text = "Distance to Manager:" + " " + Math.Round(distance, MidpointRounding.AwayFromZero).ToString();
         }
     }
 }
