@@ -2965,7 +2965,7 @@ Transform:
   m_GameObject: {fileID: 137923412}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0.756, z: 0}
-  m_LocalScale: {x: 2, y: 1, z: 2}
+  m_LocalScale: {x: 3, y: 1, z: 3}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 818023383}
@@ -21013,7 +21013,7 @@ Transform:
   m_GameObject: {fileID: 1079136227}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0.756, z: 0}
-  m_LocalScale: {x: 2, y: 1, z: 2}
+  m_LocalScale: {x: 3, y: 1, z: 3}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 36981783}
@@ -23509,7 +23509,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Dialogue: {fileID: 1666518419}
-  DialogueCamera: {fileID: 839167752}
+  DialogueCamera: {fileID: 1814926481}
   player: {fileID: 481617728}
 --- !u!114 &1220185932
 MonoBehaviour:
@@ -28158,7 +28158,7 @@ Transform:
   m_GameObject: {fileID: 1393946131}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0.756, z: 0}
-  m_LocalScale: {x: 2, y: 1, z: 2}
+  m_LocalScale: {x: 3, y: 1, z: 3}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 841538088}
