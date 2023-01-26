@@ -19300,10 +19300,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "You have jus been given your first job from your boss: reprogram the robot.
-    To enter the interfase of the robot, just walk up to it and press 'f'. \n\nSome
-    collegue also have a couple questions for you, so you could also explore the
-    office and talk to some coworkers by walking up to them and pressing 'f'. "
+  m_text: "You have just been given your first job from your boss: reprogram the
+    robot. To enter the interfase of the robot, just walk up to it and press 'f'.
+    \n\nSome collegue also have a couple questions for you, so you could also explore
+    the office and talk to some coworkers by walking up to them and pressing 'f'. "
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
